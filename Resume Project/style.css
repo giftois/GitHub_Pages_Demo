@@ -37,11 +37,15 @@ body {
     color: var(--text);
 }
 
-.grid {
+.grid-col {
     display: grid;
     grid-template-columns: repeat(12 , 1fr);
-    gap: 5px;
     margin: 0 auto;
+}
+
+.grid-row {
+    grid-template-rows: repeat(12 , 1fr);
+    gap: 5px;
 }
 
 /* Header */
@@ -54,6 +58,7 @@ nav ul {
     background-color: #d6bd971f;
     color: var(--text);
     grid-column: 4 / span 32;
+    grid-row: span 1;
     padding: 15px;
     border-radius: 20px;
     margin: 15px;
@@ -83,14 +88,14 @@ nav .h-navs {
 }
 
 .fa-code {
-    color: var(--primary);
-
+    color: var(--text);
+    text-shadow:2px 2px 0px var(--accent);
     grid-column: 8 / span 1;
     text-align: left;
     font-size: 3rem;
 }
 
-.h-button {
+.h-button, .m-button {
     position: relative;
     grid-column: 21 / span 3;
     background-color: var(--primary);
@@ -103,7 +108,7 @@ nav .h-navs {
     transition: all 0.3s ease-in-out;
 }
 
-.h-button a {
+.h-button a, .m-button{
     color: var(--background);
 }
 
@@ -113,13 +118,35 @@ nav .h-navs {
     text-shadow:0 0 .5px var(--primary);
 }
 
-.h-button a:hover {
+.h-button a:hover, .m-button:hover {
     text-decoration: underline;
 }
 
-.h-button:hover {
+.h-button:hover, .m-button:hover  {
     background-color: var(--accent);
     color: var(--background);
     box-shadow: 0 0 5px rgb(255, 255, 255);
 
+}
+
+/* Main */
+.hero {
+    grid-row: 2 / span 3;
+    grid-column: span 12;
+    background-color: #d6bd971f;
+    padding: 20px;
+}
+
+.hero p {
+    grid-column: span 12;
+    font-size: 1.5rem;
+}
+
+.landing-1, .landing-2 {
+    grid-row: 5 / span 3;
+
+}
+
+.m-button {
+    grid-row: 7 / span 1 ;
 }
