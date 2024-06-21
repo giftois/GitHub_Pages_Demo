@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css?family=Arbutus%20Slab:700|Bellota%20Text:400');
+
+:root {--text: #f1eae3;
+--background: #1a130a;
+--primary: #d6bd97;
+--secondary: #6a7036;
+--accent: #91ac53;
+}
+
+h1 {
+    font-family: "Belotta Text";
+    font-weight: 400;
+    font-size: 40px;
+}
+
+body {
+    background-color: var(--background);
+    color: var(--text);
+    
+}
