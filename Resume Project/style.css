@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Arbutus%20Slab:700|Bellota%20Text:400');
 
+/* General Styling */
 :root {--text: #f1eae3;
 --background: #1a130a;
 --primary: #d6bd97;
@@ -7,14 +8,90 @@
 --accent: #91ac53;
 }
 
-h1 {
-    font-family: "Belotta Text";
+* {
+    margin: auto 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Arbutus Slab';
+  font-weight: 700;
+}
+
+h1 {  font-size: 90px; }
+h2 {  font-size: 30px; }
+
+li {
+    list-style: none;
+}
+
+a, p {
+    font-family: "Montserrat", sans-serif;
     font-weight: 400;
-    font-size: 40px;
 }
 
 body {
     background-color: var(--background);
     color: var(--text);
-    
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(12 , 1fr);
+    gap: 5px;
+    margin: 0 auto;
+}
+
+/* Header */
+header {
+    display: grid;
+    grid-template-columns: repeat(36 , 1fr);
+}
+nav {
+    background-color: #d6bd971f;
+    color: var(--text);
+    grid-column: 2 / span 34;
+    padding: 30px 0;
+    border-radius: 20px;
+    margin: 10px 0;
+    z-index: 1;
+    gap: 0;
+}
+
+nav ul {
+    display: grid;
+    grid-template-columns: repeat(12 , 1fr);
+    color: var(--primary);
+    text-transform:uppercase;
+}
+.fa-code {
+    grid-column: 7 / span 1;
+    text-align: left;
+    font-size: 2rem;
+}
+
+.h-button {
+
+    grid-column: ;
+    background-color: var(--primary);
+    color: var(--text);
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    text-decoration: none;
+
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 700;
+    transition: all 0.3s ease-in-out;
+}
+
+.h-navs {
+    display: flex;
+    justify-content: space-around;
+    align-items: left;
+    text-decoration: none;
+    color: var(--primary);
 }
