@@ -5,7 +5,7 @@
 --text: #f1eae3;
 --background: #1a130a;
 --primary: #d6bd97;
---primaryHSL: hsl(35, 42%, 72%);
+--primaryLighter: hsl(35, 42%, 82%);
 --secondary: #6a7036;
 --accent: #91ac53;
 --accentLighter: hsl(79, 35%, 60%);
@@ -21,6 +21,7 @@
 
 h1, h2, h4, h5 {
   font-family: 'montserrat', sans-serif;
+  color: hsl(35, 42%, 82%);
 
 }
 
@@ -43,22 +44,33 @@ body {
 
 
 /* Header */
+#nameBarBox {
+    background-color: #d6bd9732
+}
+
 #nameBar {
 display: flex;
 justify-content: space-between;
 letter-spacing: 1px;
 word-spacing: 5px;
-background-color: #d6bd971f;
-padding: 10px;
+
+
 font-family: "montserrat", sans-serif;
 font-size: 1.5rem;
 color: white;
+margin: 0 25px;
+}
+
+#barName {
+    cursor: pointer;
+    margin-top: 10px;
 }
 
 #socialmedia {
     display: flex;
     align-items: space-around;
-    gap: 50px
+    gap: 50px;
+    margin-top: 10px;
 }
 
 .fa-brands {
@@ -84,14 +96,22 @@ color: white;
     flex-direction: row;
 }
 
+#topBarBox {
+    position: sticky;
+    background-color: #d6bd9732;
+    color: var(--text);
+    padding: 10px;
+    z-index: 1;
+    backdrop-filter: blur(30px);
+
+}
 
 #topBar-items {
-    background-color: #d6bd971f;
+
+
     color: var(--text);
 
     padding: 10px;
-
-    margin: 15px;
     z-index: 1;
     backdrop-filter: blur(30px);
  
@@ -113,12 +133,11 @@ color: white;
     padding: 0;
 }
 
-#h-button {
-
-    margin-left: 100px;
+#m-button {
+    font-size: 1.2rem;
 }
 
-#h-button, .m-button {
+#h-button, #m-button {
     position: relative;
     background-color: var(--primary);
     border: none;
@@ -130,55 +149,66 @@ color: white;
     /* transition: all 0.2s ease-in-out; */
 }
 
-#h-button a, .m-button{
+#h-button a, #m-button a{
     color: var(--background);
 }
 
 .h-navs a:hover {
     color: var(--primary);
     text-decoration: underline;
-    text-shadow:0 0 .5px var(--primary);
+
 }
 
-#h-button:hover, .m-button:hover  {
+.h-navs a:active {
+    color: var(--primaryLighter);
+}
+
+#h-button:hover, #m-button:hover  {
     background-color: var(--accent);
     color: var(--background);
     box-shadow: 0 0 2px rgb(255, 255, 255);
-    text-decoration: underline;
+
 }
 
-#h-button:active, .m-button:active {
+#h-button:active, #m-button:active {
     background-color: var(--accentLighter);
 }
 
 /* Main */
 
 #mainSection {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(6, 1fr);
-    background-color: #d6bd971f;
-
 }
 
 .hero-card {
-    grid-column: span 1;
-    grid-row: span 6;
+    margin: 10px 10px 10px 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 15px;
+    background-color: #d6bd971f;
+    /* display: none; */
+}
+
+#imgContainerBox {
     display: flex;
     flex-direction: column;
-
-    padding: 15px;
-    margin: 0;
+    justify-content: center;
+    align-items: center;
+    grid-column: span 1;
 }
 
 .img-container {
-    border: solid var(--accent) 2px;
+    border: solid var(--accent) 5px;
     border-radius: 500px;
-    box-shadow: white 0 0 5px;
     width: 315px;
     height: 315px;
     overflow: hidden;
     align-self: center;
+}
+
+.img-container:hover {
+    transition: all 0.9s ease-in-out;
+    border: goldenrod solid 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 .img-container img {
@@ -187,15 +217,28 @@ color: white;
     object-fit: cover;
 }
 
-#techStack {
-    text-decoration: none;
-    grid-row: span 1;
+#heroTextBox {
     grid-column: 2 / span 1;
+}
+
+#heroText {
+    font-size: 2rem;
+    text-align: center;
+    padding: 10px;
+    cursor:default;
+}
+
+.hero-card ul {
     display: flex;
-    padding: 20px;
+    justify-content: center;
+    color: var(--background);
+}
+
+#techStack {
+    display: flex;
+    padding: 35px;
     justify-content: space-around;
 
-    gap: 15px;
 }
 
 #techStackHeader {
@@ -203,15 +246,18 @@ color: white;
     text-align: center;
     font-size: 1.5rem;
     padding: 5px;
+
 }
 
 #techStackBox {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    border: solid var(--accent) 2px;
     background-color: #d6bd971f;
-
+    margin: 0 10px 10px 10px;
+    cursor: default;
+    padding-bottom: 36px;
+    /* display: none; */
 
 }
 /* ? Tech Stack styling */
@@ -227,7 +273,7 @@ color: white;
 .icon {
     background-color: var(--background);
     padding: 5px 15px;
-    gap: 5px;
+    gap: 10px;
     color: white;
 
     display: flex;
@@ -248,10 +294,37 @@ color: white;
 .fa-node-js {
     color: hsl(79, 73%, 25%);
 }
-#aboutMe {
-    grid-column: 2 / span 1;
-    grid-row: span 6;
+#aboutMeBox {
+    display: none;
     padding: 20px;
-    background-color: var(--background);
-    margin: 0 auto;
+    background-color: #d6bd971f;
+    font-size: 1.2rem;
+    margin: 0 10px;
+    cursor: default;
+    
 }
+
+#aboutMe {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    justify-content: space-between;
+
+}
+
+#aboutMeContent {
+    margin: 25px 75px;
+    padding: 20px 50px;
+    grid-column: 2 / span 4;
+}
+
+#aboutMeHeader {
+    grid-column: span 1;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    color: var(--primaryLighter);
+    margin: 25px 50px;
+
+}
+
