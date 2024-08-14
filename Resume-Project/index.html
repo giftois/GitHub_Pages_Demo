@@ -7,38 +7,27 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="/fontawesome-free-6.5.2-web/css/all.css">
     <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+
     <script defer src="script.js"></script>
 </head>
 
 <body>
     <div id="nameBarBox">
         <div id="nameBar">
-            <h3 id="barName">@giftois</h3>
-            <div id="socialmedia">
-                <a href="https://www.instagram.com/giftois/"><i class="fa-brands fa-instagram"></i></a>
-                <a href="https://github.com/giftois"><i class="fa-brands fa-github"></i></a>
-                <a href=""><i class="fa-brands fa-linkedin-in"></i></a>
-            </div>        
+            <h3 id="name"><i id="gift-icon" class="fa-solid fa-gift"></i>Gifty Wanzola</h3>       
         </div>
     </div>
 
-    <header id="topBarBox">
+
         <nav id="topBar">
             <ul id="topBar-items">
                 <li class="h-navs home-nav"><a href="home.html">Home</a></li>
                 <li class="h-navs about-nav"><a href="about.html">About</a></li>
                 <li class="h-navs projects-nav"><a href="projects.html">Projects</a></li> 
-                <i></i>
-                <i></i>
-                <i></i>
-                <i></i>
-                <i></i>
-                <div id="h-button" class="topBar-right">
-                    <a href="#">Contact Me</a>
-                </div>
+
             </ul>
         </nav>
-    </header>
+
 
     <main id="mainSection">
 
@@ -47,11 +36,13 @@
                 <div class="img-container">
                     <img src="https://media.istockphoto.com/id/1201144328/photo/smiling-black-man-in-suit-posing-on-studio-background.jpg?s=612x612&w=0&k=20&c=abcU_jcFCUgSkmpXAd5qfrsUFUcdv6oOMdtW2U-m_8g=" alt="headshot">
                 </div>
+                <div id="contactButton" class="">
+                    <a href="#">Contact Me</a>
+                </div>
             </div>
             <div id="heroTextBox">
                 <div id="heroText">
-                    <h1>Welcome</h1>
-                    <h2>Hi, my name is Gifty — a Digital Service Technician who can bring your passion projects to life! <br><br> Click the button below if you want to know more about me.</h2>
+                    <h2>Hi, my name is <span id="heroName">Gifty</span> — a Digital Service Technician who can bring your passion projects to life! <br><br> Click the button below if you want to know more about me.</h2>
                 </div>
                 <br>
                 <ul>
@@ -63,8 +54,8 @@
 
             <div id="techStackBox">
 
-                 <div id="techStackHeader">
-                    <h2>My Tech Stack:</h2>
+                 <div id="techStackHeaderBox">
+                    <h2 id="techStackHeader">My Tech Stack:</h2>
                 </div>
 
                 <ul id="techStack"> 
@@ -75,6 +66,7 @@
                     <li class="icon"><i class="fa-brands fa-python"></i>Python</li>
                     <li class="icon"><i class="fa-brands fa-node-js"></i>Node.js</li>
                     <li class="icon"><i class="fa-brands fa-git-alt"></i>Git</li>
+                    <li class="icon"><i class="fa-solid fa-database"></i>MySQL</li>
 
                 </ul>
             </div>
@@ -104,8 +96,12 @@
         
     </main>
 
-    <footer class="">
-
+    <footer id="footerBox">
+        <div id="socialmedia">
+            <a href="https://www.instagram.com/giftois/"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://github.com/giftois"><i class="fa-brands fa-github"></i></a>
+            <a href=""><i class="fa-brands fa-linkedin-in"></i></a>
+        </div> 
     </footer>
 
 </body>
